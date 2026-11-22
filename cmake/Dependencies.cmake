@@ -1,0 +1,1 @@
+# External dependency management for the project

@@ -1,0 +1,1 @@
+# Configure compiler warning settings and other options for the project
