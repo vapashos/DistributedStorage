@@ -1,13 +1,12 @@
 Questions
 1. What is the difference between CMAKE_CXX_STANDARD and target_compile_features()?
-- CMAKE_CXX_STANDARD Define the version of the c++ standard on global scope of the project.,
+- CMAKE_CXX_STANDARD initializes the C++ standard for all targets in the project created afterwards.
 - target_compile_features() is used to specifically define compiler flags for a specific target.
   its scope is quite limited compared to CMAKE_CXX_STANDARD.
 
 2. Why should we prefer add_subdirectory() over placing every target in the root CMakeLists.txt?
-Help in order to have more modular, scalable and maintainable cmake project structure.
-Each subdirectory can be build separately it helps reducing build time, in general it better
-organizes the project code into independent pieces which can be reused and combined based
+Help in order to have more modular, scalable and maintainable cmake project structure.In general it is a good practice
+since through that we can organize the project code into independent pieces which can be reused and combined based
 on the needs.
 
 3. What is the difference between configuring a project and building a project?
