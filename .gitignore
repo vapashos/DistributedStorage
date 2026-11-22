@@ -1,6 +1,5 @@
 .idea
 cmake-build*/
 build*/
-docs/.**
 *.zip
 .DS_Store
