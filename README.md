@@ -7,21 +7,21 @@ It is going to be built step by step, starting with a simple key-value store and
 
 ## Build Instructions
 1. Clone the repository:
-2. ```bash
-   git clone https://github.com/vapashos/DistributedStorage.git
-   ```
+    ```bash
+    git clone https://github.com/vapashos/DistributedStorage.git
+    ```
 2. Navigate to the project directory:
     ```bash
     cd DistributedStorage
-   ```
+    ```
 3. Configure the project using your preferred build system (e.g., Make, Ninja):
     ```bash
-   cmake -S . -B build/macos-clang-debug \
-   -DCMAKE_CXX_COMPILER=clang++ \
-   -DCMAKE_BUILD_TYPE=Debug \
-   -G Ninja
-   ```
+    cmake -S . -B build/macos-clang-debug \
+    -DCMAKE_CXX_COMPILER=clang++ \
+    -DCMAKE_BUILD_TYPE=Debug \
+    -G Ninja
+    ```
 4. Build the project:
     ```bash
     cmake --build build/macos-clang-debug
-   ```
+    ```
