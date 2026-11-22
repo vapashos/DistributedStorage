@@ -1,0 +1,2 @@
+This project is a C++ implementation of a distributed storage system. It is designed to provide a scalable and reliable solution for storing and retrieving data across multiple nodes in a network.
+It is going to be built step by step, starting with a simple key-value store and gradually adding more advanced features such as replication, sharding, and fault tolerance.
