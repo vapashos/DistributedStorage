@@ -1,0 +1,27 @@
+Questions
+1. What is the difference between CMAKE_CXX_STANDARD and target_compile_features()?
+- CMAKE_CXX_STANDARD Define the version of the c++ standard on global scope of the project.,
+- target_compile_features() is used to specifically define compiler flags for a specific target.
+  its scope is quite limited compared to CMAKE_CXX_STANDARD.
+
+2. Why should we prefer add_subdirectory() over placing every target in the root CMakeLists.txt?
+Help in order to have more modular, scalable and maintainable cmake project structure.
+Each subdirectory can be build separately it helps reducing build time, in general it better
+organizes the project code into independent pieces which can be reused and combined based
+on the needs.
+
+3. What is the difference between configuring a project and building a project?
+Configure does not build the code but it uses a generator in order to create
+the scripts and setup files which are need in order to build the project.
+It performs a first level support ,but it does not contain compilation errors or warnings.
+During configure several settings are cached for reuse purposes improving efficiency.
+It is a prerequisite step for the build process which should run afterwards.
+
+4. Why should generated files be kept outside the source tree?
+That is the clearer approach. Generated file can be easily cleaned otherwise
+we may clean up source code by mistake. It is much easier to maintain the development
+part which is the one that is reused between different builds and users.
+
+5. What happens if the developer has a compiler that does not support the requested C++ standard?
+We have an early failure on the configuration step and helps us address the problem before we
+start building.
